@@ -11,7 +11,7 @@ def test_run(playwright: Playwright) -> None:
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
 def test_valid_user(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
